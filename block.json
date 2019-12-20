@@ -1,0 +1,24 @@
+{
+	"name": "boldgrid-block/map",
+	"title": "Map",
+	"category": "common",
+	"icon": "location",
+	"description": "Displays a Google Map",
+	"keywords": [ "location", "google", "boldgrid" ],
+	"textDomain": "boldgrid-map-block",
+	"attributes": {
+		"location": {
+			"type": "string"
+		},
+		"height": {
+			"type": "number"
+		},
+		"type": {
+			"type": "string"
+		},
+		"zoom": {
+			"type": "number"
+		}
+	},
+	"editorScript": "build/index.js"
+}

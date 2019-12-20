@@ -1,0 +1,28 @@
+{
+  "name": "map-block",
+  "version": "1.0.0",
+  "description": "Simple Google Maps block",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoldGrid/block-map.git"
+  },
+  "keywords": [
+    "google",
+    "map",
+    "wordpress"
+  ],
+  "author": "rramo012",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BoldGrid/block-map/issues"
+  },
+  "homepage": "https://github.com/BoldGrid/block-map#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^6.1.0"
+  }
+}
