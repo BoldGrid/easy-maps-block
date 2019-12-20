@@ -1,5 +1,5 @@
 {
-  "name": "map-block",
+  "name": "boldgrid-map-block",
   "version": "1.0.0",
   "description": "Simple Google Maps block",
   "main": "src/index.js",
