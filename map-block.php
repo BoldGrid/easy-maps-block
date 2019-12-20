@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Map Block
  * Plugin URI: https://www.boldgrid.com/
- * Description: Simple Google Maps block.
+ * Description: Google Maps block
  * Version: 1.0.0
  * Author: BoldGrid <support@boldgrid.com>
  * Author URI: https://www.boldgrid.com/
