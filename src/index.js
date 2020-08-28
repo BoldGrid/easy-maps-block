@@ -1,5 +1,5 @@
 import { registerBlockType } from '@wordpress/blocks';
-import { TextControl, RangeControl, RadioControl } from '@wordpress/components';
+import { TextControl, RangeControl, RadioControl, IconButton } from '@wordpress/components';
 import { InspectorControls } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 
@@ -15,9 +15,32 @@ function GoogleMap( props ) {
 	} );
 
 	const src = baseUrl + '?' + params.toString();
-	return <div>
-		<iframe src={ src } style={ style }></iframe>
-	</div>;
+
+	if ( ! props.editor ) {
+		return <div>
+			<iframe src={ src } style={ style }></iframe>
+		</div>;
+	} else {
+		return <div style={ { position: 'relative' } }>
+			<EditButton />
+			<iframe src={ src } style={ style }></iframe>
+		</div>
+	}
+}
+
+function EditButton() {
+	var style = {
+		position: 'absolute',
+		borderRadius: '50%',
+		top: '-1rem',
+		right: '-1rem',
+		color: '#fff',
+		background: 'var(--wp-admin-theme-color)',
+	};
+
+	return <IconButton style={ style }
+		icon="edit"
+	/>
 }
 
 registerBlockType( 'boldgrid-block/map', {
@@ -59,6 +82,7 @@ registerBlockType( 'boldgrid-block/map', {
 		return (
 			<>
 				<GoogleMap
+					editor={true}
 					zoom={props.attributes.zoom}
 					height={props.attributes.height}
 					type={props.attributes.type}
@@ -101,6 +125,7 @@ registerBlockType( 'boldgrid-block/map', {
 	},
 	save( props ) {
 		return <GoogleMap
+			editor={false}
 			zoom={props.attributes.zoom}
 			height={props.attributes.height}
 			type={props.attributes.type}
